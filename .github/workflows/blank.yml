@@ -1,8 +1,8 @@
-name: Daily Commit-1
+name: Daily Commit
 
 on:
   schedule:
-    - cron: "17 6 * * *"
+    - cron: "20 6 * * *"
 
 jobs:
   commit:
@@ -21,7 +21,6 @@ jobs:
           for ((i=0; i<${{ steps.random_number.outputs.random }}; i++)); do
             echo "//Test -Commit" >> README.md
           done
-
       - name: Commit and Push Changes
         run: |
           git config --local user.email "chaudharysarthak46@gmail.com"
