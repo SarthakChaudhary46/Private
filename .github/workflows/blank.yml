@@ -1,0 +1,31 @@
+name: Daily Commit
+
+on:
+  schedule:
+    - cron: "55 10 * * *"
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Generate Random Number
+        id: random_number
+        run: echo "::set-output name=random::$(shuf -i 10-30 -n 1)"
+
+      - name: Add Test Commit
+        run: |
+          for ((i=0; i<${{ steps.random_number.outputs.random }}; i++)); do
+            echo "//Test -Commit" >> README.md
+          done
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "chaudharysarthak46@gmail.com"
+          git config --local user.name "SarthakChaudhary46"
+          git add README.md
+          git commit -m "Add test commits"
+          git push
