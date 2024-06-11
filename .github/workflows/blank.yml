@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: "57 18 * * *"
+    - cron: "28 18 * * *"
 
 jobs:
   commit:
