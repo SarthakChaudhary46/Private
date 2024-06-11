@@ -1,7 +1,7 @@
 name: Daily Commit -
 
-# on:
-#   push
+on:
+  push
     
 jobs:
   commit:
@@ -22,5 +22,5 @@ jobs:
           git config --local user.name "SarthakChaudhary46"
           echo "https://SarthakChaudhary46:${{ secrets.PAT }}@github.com/SarthakChaudhary46/Private" > ~/.git-credentials
           git add README.md
-          git commit --date = '2024-06-09' -m 'Test Commit'
+          git commit --date='2024-06-09' -m 'Test Commit'
           git push
