@@ -1,8 +1,9 @@
 name: Daily Commit -
 
-# on:
-#   schedule:
-#     - cron: "30 6 * * *"
+on:
+  schedule:
+    - cron: "* * * * *"
+
 jobs:
   commit:
     runs-on: ubuntu-latest
