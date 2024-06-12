@@ -1,8 +1,8 @@
 name: Daily Commit -
 
-on:
-  schedule:
-    - cron: "* * * * *"
+# on:
+#   schedule:
+#     - cron: "* * * * *"
 
 jobs:
   commit:
