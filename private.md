@@ -1,4 +1,4 @@
-name: Daily Commit -
+wnwname: Daily Commit -
 
 # on:
 #   push
